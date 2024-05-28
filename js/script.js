@@ -19,6 +19,9 @@ function a(){
         }
     })
 };
-
-
 a()
+window.addEventListener("scroll", () => {
+    let scroll = document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.querySelector(".scrol").setAttribute("style", `width : ${scroll / height * 100}%`)
+})  
